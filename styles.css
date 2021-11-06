@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Noto+Serif+Display:wght@100;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Merriweather", serif;
+  overscroll-behavior: none;
+}
+
+*::-moz-selection {
+  background: rgba(255, 251, 0, 0.781);
+}
+
+*::selection {
+  background: rgba(255, 251, 0, 0.781);
+}
+
+mark.red {
+  color: red;
+  background: none;
+}
+
+a {
+  color: yellow;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #141414;
+  position: fixed;
+  width: 100vw;
+  height: 5rem;
+  padding: 1rem;
+  -webkit-box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px black;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  z-index: 12;
+}
+
+.nav a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  display: block;
+  font-size: 1.3rem;
+  padding: 1.5rem;
+  margin: 2rem;
+  color: white;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  cursor: pointer;
+  color: #d1d1d1;
+}
+
+.nav a:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #fc7a00;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.nav a:hover:after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.nav a.fromRight:after {
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+.nav a.fromLeft:after {
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+.nav--hidden {
+  -webkit-transform: translateY(-5rem);
+  transform: translateY(-5rem);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+.intro-section {
+  background-color: #191919;
+  position: relative;
+  padding-top: 8rem;
+  width: 100vw;
+  height: 800px;
+}
+
+.intro-section img {
+  display: block;
+  margin: 0 auto;
+  height: 90%;
+}
+
+.intro-section h2 {
+  position: relative;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.intro {
+  width: 100vw;
+  background-color: #191919;
+  padding-top: 2rem;
+}
+
+.intro .intro-para {
+  background-color: #191919;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.intro .intro-para h1 {
+  font-size: 2rem;
+  color: #f8c373;
+}
+
+.intro .intro-para p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: white;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.text0 {
+  width: 100vw;
+  background-color: #191919;
+  padding-top: 10rem;
+}
+
+.text0 .section1 {
+  background-color: #191919;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.5rem;
+  padding: 1rem;
+  border-left: 2px solid #f8c373;
+}
+
+.text0 .section1 h1 {
+  font-size: 2rem;
+  color: #fc7a00;
+}
+
+.text0 .section1 h2 {
+  color: #f8c373;
+}
+
+.text0 .section1 p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.text1 {
+  width: 100vw;
+  background-color: #191919;
+}
+
+.text1 .section1 {
+  background-color: #191919;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.5rem;
+  padding: 1rem;
+  border-left: 2px solid #f8c373;
+}
+
+.text1 .section1 h1 {
+  font-size: 2rem;
+  color: #fc7a00;
+}
+
+.text1 .section1 h2 {
+  color: #f8c373;
+}
+
+.text1 .section1 p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.section1-image {
+  width: 100vw;
+  height: 950px;
+  background-color: #191919;
+  padding-top: 7rem;
+}
+
+.section1-image .image {
+  width: 650px;
+  margin: 0 auto;
+}
+
+.section1-image .image .bottom-left {
+  color: White;
+  position: relative;
+}
+
+.section1-image .image .bottom-left h1 {
+  text-shadow: 0 0 15px black;
+  font-size: 1rem;
+}
+
+.section2-image {
+  width: 100vw;
+  background-color: #191919;
+  padding-top: 7rem;
+  height: 850px;
+}
+
+.section2-image .video-container {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.section2-image .video-container video {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  max-width: 1100px;
+}
+
+.section3-image {
+  width: 100vw;
+  background-color: #191919;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.section3-image .img-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section3-image .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.section3-image .img-container h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.gridbox {
+  display: inline-block;
+  background-color: #191919;
+  padding-top: 10rem;
+  padding-bottom: 7rem;
+  width: 100vw;
+}
+
+.gridbox .container {
+  max-width: 1600px;
+  background-color: #191919;
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  gap: 2rem;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.gridbox .container .box1 {
+  overflow: hidden;
+  background-color: blueviolet;
+  max-width: 100%;
+  max-height: 500px;
+  -webkit-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+
+.gridbox .container .box1 figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gridbox .container .box1 figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.gridbox .container .box1 figure figcaption {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.37);
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  bottom: 0;
+  width: 100%;
+}
+
+.gridbox .container .box1:hover {
+  -webkit-transform: scale(1.07);
+  transform: scale(1.07);
+  z-index: 11;
+}
+
+.section5-image {
+  width: 100vw;
+  height: 950px;
+  background-color: #191919;
+  padding-top: 7rem;
+}
+
+.section5-image .image {
+  background-image: url(images/The-average-fire-size-across-the-world-from-2003-16-1.jpeg);
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.section5-image .image .bottom-left {
+  color: White;
+  position: relative;
+  top: 70%;
+}
+
+.section5-image .image .bottom-left h1 {
+  font-size: 1rem;
+  text-shadow: 0 0 15px black;
+}
+/*# sourceMappingURL=styles.css.map */
